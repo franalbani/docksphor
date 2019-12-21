@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+#xhost local:root
+
+xhost +
+
+docker run --rm -i --net=host -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -t docksphor

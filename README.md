@@ -2,6 +2,9 @@
 
 gr-fosphor inside docker for people unable to install it.
 
+![Docksphor GRC Idea](docksphor_grc_idea.png)
+
+
 ## First: build
 
 * `./build`

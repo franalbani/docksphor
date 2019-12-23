@@ -32,16 +32,16 @@ options:
     state: enabled
 
 blocks:
-- name: fc
+- name: address
   id: variable
   parameters:
     comment: ''
-    value: '0'
+    value: '''tcp://127.0.0.1:35000'''
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [256, 12.0]
+    coordinate: [160, 12.0]
     rotation: 0
     state: enabled
 - name: samp_rate
@@ -53,7 +53,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [168, 12.0]
+    coordinate: [312, 12.0]
     rotation: 0
     state: enabled
 - name: fosphor_qt_sink_c_0
@@ -62,7 +62,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    freq_center: fc
+    freq_center: '0'
     freq_span: samp_rate
     gui_hint: ''
     wintype: firdes.WIN_BLACKMAN_hARRIS
@@ -76,7 +76,7 @@ blocks:
 - name: zeromq_sub_source_0
   id: zeromq_sub_source
   parameters:
-    address: tcp://127.0.0.1:35000
+    address: address
     affinity: ''
     alias: ''
     comment: ''

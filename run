@@ -4,4 +4,12 @@
 
 xhost +
 
-docker run --rm -i --net=host -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -t docksphor
+docker run --rm \
+           -i \
+           --user builder \
+           --device /dev/dri \
+           --net=host \
+           -v /tmp/.X11-unix:/tmp/.X11-unix \
+           -e DISPLAY=$DISPLAY\
+           -t docksphor \
+           # bash
